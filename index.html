@@ -1,7 +1,9 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Type" content="text/html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>QianPhotoWall</title> 
 
 <style type="text/css">
@@ -27,12 +29,21 @@ body {
 </style>
 
 <script type="text/javascript" src="js/ge1doot.js"></script>
+</head> 
+<body>
+   <audio id="audios" autoplay loop >
+        <source src="http://music.163.com/song/media/outer/url?id=434902428.mp3" type="audio/mp3" />
+    </audio> 
+<script>
+
+</script>
+<canvas id="canvas">你的浏览器不支持HTML5画布技术，请使用谷歌浏览器。</canvas>
+</body>
 <script type="text/javascript">
-
-
-"use strict";
-
 (function () {
+	document.addEventListener('WeixinJSBridgeReady',function(){
+		document.getElementById('audios').play();	
+	})
 	/* ==== definitions ==== */
 	var diapo = [], layers = [], ctx, pointer, scr, camera, light, fps = 0, quality = [1,2],
 	// ---- poly constructor ----
@@ -369,12 +380,4 @@ body {
 	}
 });
 </script>
-
-</head> 
-<body>
-
-<canvas id="canvas">你的浏览器不支持HTML5画布技术，请使用谷歌浏览器。</canvas>
-
-
-</body>
 </html>
